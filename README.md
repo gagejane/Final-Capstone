@@ -7,7 +7,7 @@ The [Global Terrorism Database] (GTD) provides information on terrorist attacks 
 
 **Figure 1. Suicide vs. Non-Suicide Bombings Over Time**
 
-![](images/Suicide_over_time.png)
+![](images/suicide_over_time.png)
 
 Similarly, when we look at terrorist activity at the group level, we see that the number of groups that do engage in suicide bombings is low and, among those groups, the proportion of attacks that are suicide bombings (versus other types of attacks) is small. See Figure 2a, 2b, and 2c for illustrations of these trends, using GTD data from 2017.
 
