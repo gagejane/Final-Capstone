@@ -200,7 +200,7 @@ def feat_imp(importances):
 
     plt.figure(figsize = (15,10))
     plt.bar(feature_names, feature_importances)
-    plt.title('Feature Importance for Model 3', weight='bold', fontsize=15)
+    plt.title('Feature Importance for Random Forest Model', weight='bold', fontsize=15)
     plt.ylabel("Feature Importance", weight='bold', fontsize=12)
     plt.xlabel("Features", weight='bold', fontsize=12)
     plt.xticks(rotation=60, horizontalalignment='right')

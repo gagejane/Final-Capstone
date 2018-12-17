@@ -1,4 +1,4 @@
-import code_for_analysis as an
+import code_for_modeling as an
 from sklearn.model_selection import train_test_split
 import pandas as pd
 
