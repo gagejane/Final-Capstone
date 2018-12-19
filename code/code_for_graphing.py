@@ -197,14 +197,14 @@ def make_violin(df):
     numeric_cols = [col for col in df if df[col].dtype.kind != 'O']
     df[numeric_cols] += 1
 
-    df['log_wound'] = np.log(df['nwound'])
-    df['log_kill'] = np.log(df['nkill'])
+    df['log_wound'] = np.log10(df['nwound'])
+    df['log_kill'] = np.log10(df['nkill'])
 
     df_plot = df[['suicide_text','log_kill', 'log_wound']]
     ax = sns.violinplot(x = 'suicide_text', y = 'log_kill', data = df_plot)
 
     plt.xlabel('Type of Attack', weight='bold')
-    plt.ylabel('Log Number Killed', weight='bold')
-    plt.title('Log Number of People Killed by Type of Attack in 2017', weight='bold')
+    plt.ylabel('Log Base 10 Number Killed', weight='bold')
+    plt.title('Number of People Killed by Type of Attack in 2017', weight='bold')
     # plt.show()
     plt.savefig('images/killed')
