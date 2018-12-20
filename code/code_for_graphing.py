@@ -37,6 +37,8 @@ def make_heat(df):
     df['country_names'] = df['country'].replace(dict_country)
     df = df[['country','country_names']]
     df.columns=['id', 'name']
+    # print(df['suicide'].value_counts())
+    # print(df.info())
     count_countries(df)
 
 def count_countries(df):
@@ -58,11 +60,11 @@ def merge_plot_heat(df):
     world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
     country_names = world[['name', 'continent', 'geometry', 'iso_a3']]
     world_merged = country_names.merge(df, how='left', on='name')
-    world_merged.fillna(value=0,inplace=True)
-    world_merged.plot(column='count', cmap='Oranges', linewidth=0.5, edgecolor='black', legend=True,
-     figsize=(20,20), scheme='fisher_jenks')
+    world_merged['count'].fillna(value=0,inplace=True)
+    world_merged.plot(column='count', cmap='Oranges', linewidth=0.5, edgecolor='black', legend=True, figsize=(20,20), scheme='fisher_jenks')
     plt.title('Suicide Bombing Frequency in 2017', weight='bold', fontsize=25)
-    plt.savefig('images/Heatmap')
+    # plt.savefig('images/Heatmap')
+    # plt.show()
 
 def sep_dfs(df, group_list):
     '''

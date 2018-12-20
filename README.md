@@ -29,7 +29,7 @@ Suicide bombings tend to be concentrated in specific countries; most countries d
 
 **Figure 3. Heatmap of Suicide Bombings in 2017**
 
-![](images/Heatmap1.png)
+![](images/Heatmap.png)
 
 Nonetheless, suicide bombings are more deadly than other forms of terrorism; see Figure 4 for a plot of the number of people killed in suicide bombings versus non-suicide bombings in 2017 alone.
 
